@@ -32,18 +32,21 @@ class ViewController: UIViewController {
    //Part 8
     @IBAction func buttonPressed(_ sender: Any) {
         
-        
+        //Comment #1: if currentIndex is less than the "favoriteFoodsArray" array count
         if self.currentIndex < self.favoriteFoodsArray.count
         {
-            //set bottomLabeltext to item in the array at currentIndex
+            // Comment #2: set bottomLabeltext to item in the array at currentIndex
             bottomLabel.text = favoriteFoodsArray[currentIndex]
-            //set the title of the button to "Next"
+            //Comment #3:set the title of the button to "Next"
             buttonLabel.setTitle("Next", for: UIControl.State.normal)
+            //Comment #4:increment currentIndex by 1
             currentIndex+=1
         }
         else
         {
+            //Comment #5:print the string: "Button has been disabled"
             print("Button has been disabled")
+            //Comment #6:disable the button
             (buttonLabel!).isEnabled=false
         }
         
